@@ -2,6 +2,8 @@
 
 A modern, responsive portfolio website showcasing skills, experience, and projects in web development. Built with HTML5, CSS3, and JavaScript, featuring a clean design with smooth animations and interactive elements.
 
+**Live Demo**: [https://aslivashu.github.io/Portfolio/](https://aslivashu.github.io/Portfolio/)
+
 ## Overview
 
 This portfolio serves as a comprehensive showcase of my journey as a Full Stack Web Developer, highlighting my technical skills, educational background, project work, and professional experience. The website is designed with a focus on user experience, accessibility, and modern web standards.
@@ -144,7 +146,7 @@ This is a personal portfolio project. However, suggestions and feedback are welc
 - **Email**: sarthaktyagi1133@gmail.com
 - **LinkedIn**: [linkedin.com/in/sarthaktyagi2236999](https://www.linkedin.com/in/sarthaktyagi2236999)
 - **GitHub**: [github.com/aslivashu](https://github.com/aslivashu)
-- **Portfolio**: [Live Website](https://your-portfolio-url.com)
+- **Portfolio**: [aslivashu.github.io/Portfolio](https://aslivashu.github.io/Portfolio/)
 
 ## License
 
