@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Update scroll progress on scroll
     window.addEventListener('scroll', updateScrollProgress);
 
-    // Scroll Arrow visibility functionality
+    // Scroll Arrow visibility functionality with smooth scroll-based fade
     const scrollArrow = document.querySelector('.scroll-arrow');
     const aboutSection = document.getElementById('about');
     let lastScrollTop = 0;
@@ -77,18 +77,32 @@ document.addEventListener('DOMContentLoaded', function() {
     function handleScrollArrow() {
         const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
         const aboutSectionTop = aboutSection ? aboutSection.offsetTop : 800;
-        const homeHeight = aboutSectionTop; // Approximate home section height
+        const homeHeight = aboutSectionTop;
         
-        if (scrollArrow) {
-            // Hide when scrolling down past home section
-            if (currentScrollTop > homeHeight * 0.7) {
+        if (scrollArrow && currentScrollTop < homeHeight) {
+            // Calculate smooth fade based on scroll amount
+            const maxScrollForFade = homeHeight * 0.7; // Fade completely by 70% of home section
+            
+            // Calculate opacity based on how much user has scrolled
+            let opacity = 1;
+            if (currentScrollTop > 0) {
+                opacity = Math.max(0, 1 - (currentScrollTop / maxScrollForFade));
+            }
+            
+            // Apply the calculated opacity
+            scrollArrow.style.opacity = opacity.toString();
+            scrollArrow.style.visibility = opacity > 0.1 ? 'visible' : 'hidden';
+            
+            if (opacity <= 0.1) {
                 scrollArrow.classList.add('hidden');
-            } 
-            // Show when in home section OR scrolling up from about section
-            else if (currentScrollTop < homeHeight * 0.8 || 
-                    (currentScrollTop < lastScrollTop && currentScrollTop > homeHeight * 0.3)) {
+            } else {
                 scrollArrow.classList.remove('hidden');
             }
+        } else if (scrollArrow && currentScrollTop >= homeHeight) {
+            // Completely hide when past home section
+            scrollArrow.style.opacity = '0';
+            scrollArrow.style.visibility = 'hidden';
+            scrollArrow.classList.add('hidden');
         }
         
         lastScrollTop = currentScrollTop;
@@ -594,4 +608,21 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
+});
+
+// Scroll Arrow Click Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollArrow = document.querySelector('.scroll-arrow');
+    
+    if (scrollArrow) {
+        scrollArrow.addEventListener('click', function() {
+            const aboutSection = document.getElementById('about');
+            if (aboutSection) {
+                aboutSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    }
 });
