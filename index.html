@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="dark-theme">
+    <canvas id="particleCanvas"></canvas>
+    <div class="scroll-progress" style="position: fixed; top: 0px; left: 0px; width: 25.3062%; height: 3px; background: linear-gradient(135deg, rgb(100, 255, 218) 0%, rgb(108, 92, 231) 50%, rgb(255, 107, 107) 100%); z-index: 1001; transition: width 0.1s;"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Sarthak</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="https://drive.google.com/file/d/16TNnYkjuDmCX_GPkF5Bod2OJ_uCUKOIK/view?usp=sharing" class="nav-link" target="_blank" rel="noopener noreferrer">Resume</a></li>
+            </ul>
+            <div class="navbar-controls">
+                <div class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-sun icon-gold"></i>
+                    <i class="fas fa-moon icon-accent"></i>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>
+                    <span class="typing-text">Hello, I'm</span>
+                    <span class="name-highlight">Sarthak Tyagi</span>
+                </h1>
+                <h2>Aspiring Full Stack Web Developer</h2>
+                <p>I am currently pursuing a degree in Computer Science. Passionate about front-end and back-end web development, I am learning React.js, UI/UX design, and exploring modern web technologies to build scalable and user-friendly applications.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="/WhatsApp_Image_2025-05-15_at_14.52.02_4ec382bb-removebg-preview.png" alt="Sarthak Tyagi">
+            </div>
+        </div>
+        <div class="scroll-arrow"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <p>Get to know me better</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>A passionate learner and developer</h3>
+                    <p>I'm Sarthak Tyagi, an engineering student with a serious passion for web development and modern technology. I thrive on building web applications that are both visually impressive and highly efficient, designed to tackle real-world challenges.</p>
+                    <p>My focus right now is on honing my skills in JavaScript and React.js, with a keen eye on UI/UX principles to deliver intuitive user experiences. On the backend, I'm using Node.js and Express.js to construct powerful server-side applications and APIs.</p>
+                    <p>Beyond that, my toolkit includes Python and Java, and I'm adept at using Git for version control. I'm also diving into Docker and AWS to handle deployment and cloud services. I'm comfortable working with a range of databases, from SQL and MySQL to MongoDB.</p>
+                    <p>Ultimately, I'm working toward my goal of becoming a full-stack developer, specializing in the MERN stack, and I'm always on the lookout for new frameworks and technologies to bring into my projects. I'm a dedicated learner who's ready to take on new and exciting challenges in the world of software development.</p>
+                    <div class="stats">
+                        <div class="stat">
+                            <h4>6+</h4>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="stat">
+                            <h4>3+</h4>
+                            <p>Years Coding</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="WhatsApp_Image_2025-05-15_at_14.52.02_4ec382bb-removebg-preview.png" alt="About Me">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2>Skills & Expertise</h2>
+                <p>What I bring to the table</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Programming Languages</h3>
+                    <p>JavaScript, Python, Java, SQL</p>
+                    <div class="individual-skills">
+                        <div class="individual-skill">
+                            <span>JavaScript</span>
+                            <div class="individual-progress"><div class="progress-fill" data-width="90%"></div></div>
+                        </div>
+                        <div class="individual-skill">
+                            <span>Python</span>
+                            <div class="individual-progress"><div class="progress-fill" data-width="70%"></div></div>
+                        </div>
+                        <div class="individual-skill">
+                            <span>C/C++</span>
+                            <div class="individual-progress"><div class="progress-fill" data-width="70%"></div></div>
+                        </div>
+                        <div class="individual-skill">
+                            <span>Java</span>
+                            <div class="individual-progress"><div class="progress-fill" data-width="75%"></div></div>
+                        </div>
+                        <div class="individual-skill">
+                            <span>SQL</span>
+                            <div class="individual-progress"><div class="progress-fill" data-width="88%"></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <h3>Frontend Development</h3>
+                    <p>React, HTML, CSS, JavaScript</p>
+                    <div class="individual-skills">
+                        <div class="individual-skill">
+                            <span>React</span>
+                            <div class="individual-progress"><div class="progress-fill" data-width="90%"></div></div>
+                        </div>
+                        <div class="individual-skill">
+                            <span>HTML</span>
+                            <div class="individual-progress"><div class="progress-fill" data-width="95%"></div></div>
+                        </div>
+                        <div class="individual-skill">
+                            <span>CSS</span>
+                            <div class="individual-progress"><div class="progress-fill" data-width="92%"></div></div>
+                        </div>
+                        <div class="individual-skill">
+                            <span>Tailwind CSS</span>
+                            <div class="individual-progress"><div class="progress-fill" data-width="85%"></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-angular"></i>
+                    </div>
+                    <h3>Angular Framework</h3>
+                    <p>Angular, TypeScript, RxJS, Angular CLI</p>
+                    <div class="individual-skills">
+                        <div class="individual-skill">
+                            <span>Angular</span>
+                            <div class="individual-progress"><div class="progress-fill" data-width="80%"></div></div>
+                        </div>
+                        <div class="individual-skill">
+                            <span>TypeScript</span>
+                            <div class="individual-progress"><div class="progress-fill" data-width="85%"></div></div>
+                        </div>
+                        <div class="individual-skill">
+                            <span>RxJS</span>
+                            <div class="individual-progress"><div class="progress-fill" data-width="70%"></div></div>
+                        </div>
+                        <div class="individual-skill">
+                            <span>Angular CLI</span>
+                            <div class="individual-progress"><div class="progress-fill" data-width="75%"></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Backend Development</h3>
+                    <p>Node.js, Express, API Development</p>
+                    <div class="individual-skills">
+                        <div class="individual-skill">
+                            <span>Node.js</span>
+                            <div class="individual-progress"><div class="progress-fill" data-width="85%"></div></div>
+                        </div>
+                        <div class="individual-skill">
+                            <span>Express</span>
+                            <div class="individual-progress"><div class="progress-fill" data-width="80%"></div></div>
+                        </div>
+                        <div class="individual-skill">
+                            <span>API Development</span>
+                            <div class="individual-progress"><div class="progress-fill" data-width="85%"></div></div>
+                        </div>
+                        <div class="individual-skill">
+                            <span>REST APIs</span>
+                            <div class="individual-progress"><div class="progress-fill" data-width="88%"></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Database Management</h3>
+                    <p>MySQL, MongoDB, SQL</p>
+                    <div class="individual-skills">
+                        <div class="individual-skill">
+                            <span>MySQL</span>
+                            <div class="individual-progress"><div class="progress-fill" data-width="85%"></div></div>
+                        </div>
+                        <div class="individual-skill">
+                            <span>MongoDB</span>
+                            <div class="individual-progress"><div class="progress-fill" data-width="80%"></div></div>
+                        </div>
+                        <div class="individual-skill">
+                            <span>SQL</span>
+                            <div class="individual-progress"><div class="progress-fill" data-width="90%"></div></div>
+                        </div>
+                        <div class="individual-skill">
+                            <span>Database Design</span>
+                            <div class="individual-progress"><div class="progress-fill" data-width="75%"></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-aws"></i>
+                    </div>
+                    <h3>Cloud & DevOps</h3>
+                    <p>AWS, Docker, Git</p>
+                    <div class="individual-skills">
+                        <div class="individual-skill">
+                            <span>AWS</span>
+                            <div class="individual-progress"><div class="progress-fill" data-width="75%"></div></div>
+                        </div>
+                        <div class="individual-skill">
+                            <span>Docker</span>
+                            <div class="individual-progress"><div class="progress-fill" data-width="70%"></div></div>
+                        </div>
+                        <div class="individual-skill">
+                            <span>Git</span>
+                            <div class="individual-progress"><div class="progress-fill" data-width="90%"></div></div>
+                        </div>
+                        <div class="individual-skill">
+                            <span>Cloud Services</span>
+                            <div class="individual-progress"><div class="progress-fill" data-width="72%"></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Development Platforms</h3>
+                    <p>Android Development, Full Stack, MERN Stack</p>
+                    <div class="individual-skills">
+                        <div class="individual-skill">
+                            <span>Android Development</span>
+                            <div class="individual-progress"><div class="progress-fill" data-width="80%"></div></div>
+                        </div>
+                        <div class="individual-skill">
+                            <span>Full Stack</span>
+                            <div class="individual-progress"><div class="progress-fill" data-width="90%"></div></div>
+                        </div>
+                        <div class="individual-skill">
+                            <span>MERN Stack</span>
+                            <div class="individual-progress"><div class="progress-fill" data-width="90%"></div></div>
+                        </div>
+                        <div class="individual-skill">
+                            <span>Mobile UI</span>
+                            <div class="individual-progress"><div class="progress-fill" data-width="85%"></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI Integration</h3>
+                    <p>Machine Learning, AI APIs, Data Analytics</p>
+                    <div class="individual-skills">
+                        <div class="individual-skill">
+                            <span>Machine Learning</span>
+                            <div class="individual-progress"><div class="progress-fill" data-width="65%"></div></div>
+                        </div>
+                        <div class="individual-skill">
+                            <span>AI APIs</span>
+                            <div class="individual-progress"><div class="progress-fill" data-width="85%"></div></div>
+                        </div>
+                        <div class="individual-skill">
+                            <span>Data Analytics</span>
+                            <div class="individual-progress"><div class="progress-fill" data-width="80%"></div></div>
+                        </div>
+                        <div class="individual-skill">
+                            <span>Python ML</span>
+                            <div class="individual-progress"><div class="progress-fill" data-width="70%"></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p>Wireframing, Figma, Responsive Design</p>
+                    <div class="individual-skills">
+                        <div class="individual-skill">
+                            <span>Wireframing</span>
+                            <div class="individual-progress"><div class="progress-fill" data-width="80%"></div></div>
+                        </div>
+                        <div class="individual-skill">
+                            <span>Figma</span>
+                            <div class="individual-progress"><div class="progress-fill" data-width="85%"></div></div>
+                        </div>
+                        <div class="individual-skill">
+                            <span>Responsive Design</span>
+                            <div class="individual-progress"><div class="progress-fill" data-width="90%"></div></div>
+                        </div>
+                        <div class="individual-skill">
+                            <span>User Research</span>
+                            <div class="individual-progress"><div class="progress-fill" data-width="70%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2>Experience & Education</h2>
+                <p>My journey in Web Development Learning</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2022 - 2026 - Present</div>
+                    <div class="timeline-content">
+                        <h3>BTech Computer Science and Engineering</h3>
+                        <h4>4th Year Student</h4>
+                        <p>Currently pursuing my degree in Computer Science and Engineering with focus on Web Development and modern technologies. Exploring front-end and back-end technologies with practical projects.</p>
+                        <div class="tags">
+                            <span>Front-end</span>
+                            <span>Back-end</span>
+                            <span>Data Structure</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2023 - 2025</div>
+                    <div class="timeline-content">
+                        <h3>Projects & Learning</h3>
+                        <h4>Hands-on Experience</h4>
+                        <p>Worked on multiple projects including e-commerce websites, portfolio websites, calculators, and various web applications. Gained practical experience in web development.</p>
+                        <div class="tags">
+                            <span>JavaScript</span>
+                            <span>React</span>
+                            <span>Git</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+                <p>Some of my recent work</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Netflix Clone">
+                    </div>
+                    <div class="project-content">
+                        <h3>Netflix Clone</h3>
+                        <p>A responsive Netflix clone website built with HTML, CSS, and JavaScript. Features movie listings, hover effects, and modern UI design.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Spotify Clone">
+                    </div>
+                    <div class="project-content">
+                        <h3>Spotify Clone</h3>
+                        <p>A music streaming platform clone with modern UI, responsive design, and interactive elements built using HTML, CSS, and JavaScript.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Portfolio Website">
+                    </div>
+                    <div class="project-content">
+                        <h3>Portfolio Website</h3>
+                        <p>My personal portfolio showcasing my skills, education, projects, and contact details.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://private-user-images.githubusercontent.com/138832704/486569202-a7c174ac-32bf-4747-8f05-9f826dafb674.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTc0MDI3MjYsIm5iZiI6MTc1NzQwMjQyNiwicGF0aCI6Ly8xMzg4MzI3MDQvNDg2NTY5MjAyLWE3YzE3NGFjLTMyYmYtNDc0Ny04ZjA1LTlmODI2ZGFmYjY3NC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwMTA5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDEwOVQxNTIwMjZaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0yNTUwOTMwYjQ5Yzg1NDQ1ODc5ODJiNGE3ODU0NTBkZGE4M2ZkOGIzNTlhY2QxNWI5YjQwNzFkMjI2M2UzODQzJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.iCBxGXJQcuvNAd_SLYr2gksHT6xhCiHOWDLmb3LPp9M" alt="Simon Says Game">
+                    </div>
+                    <div class="project-content">
+                        <h3>SimonSaysGame</h3>
+                        <p>A classic memory game built with HTML, CSS, and JavaScript. Features interactive gameplay, sound effects, and level progression.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="QR Code Generator">
+                    </div>
+                    <div class="project-content">
+                        <h3>WeLoveQRcodes</h3>
+                        <p>A QR code generator web application that creates custom QR codes for various purposes. Built with modern web technologies.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Unit Converter Mobile App">
+                    </div>
+                    <div class="project-content">
+                        <h3>UniitzConvert</h3>
+                        <p>A comprehensive mobile unit conversion app supporting multiple measurement units including length, weight, temperature, and more.</p>
+                    </div>
+                </div>
+                
+                <!-- View All Projects Card -->
+                <div class="project-card view-all-card">
+                    <div class="project-image">
+                        <div class="view-all-content">
+                            <i class="fas fa-arrow-right"></i>
+                            <h3>View All Projects</h3>
+                            <p>Explore my complete portfolio</p>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>More Projects</h3>
+                        <p>Discover detailed information about all my projects, including live demos, source code, and technical insights.</p>
+                        <div class="project-links">
+                            <a href="projects.html" class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i> View All
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Testimonials</h2>
+                <p>What people say about me</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p>"Sarthak is a dedicated learner and developer. His work on web development projects shows great creativity and consistency. Always eager to learn new technologies and implement them effectively."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4>Priya Sharma</h4>
+                            <p>Mentor - Training (TCL-IT Chandigarh)</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p>"Working with Sarthak was a great experience. He has excellent problem-solving skills and always brings innovative solutions to complex challenges. His passion for full-stack development is evident."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4>Dr. Amit Kumar</h4>
+                            <p>Computer Science Professor</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p>"I've had the pleasure of collaborating with Sarthak on several projects. His attention to detail and passion for clean code is impressive. He quickly adapts to new frameworks and technologies."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4>Rahul Gupta</h4>
+                            <p>Team Lead - Project Collaboration</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p>"Sarthak's dedication to learning and improving his skills is remarkable. His projects demonstrate strong technical abilities in both frontend and backend development. A promising developer with great potential."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4>Sneha Patel</h4>
+                            <p>Project Supervisor</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p>"Sarthak's approach to web development is both methodical and creative. He has a strong foundation in modern technologies like React, Node.js, and database management. His work ethic is commendable."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4>Aditya Bhardwaj</h4>
+                            <p>Senior Full Stack Developer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Let's work together</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Email</h4>
+                            <p>sarthaktyagi1133@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Phone</h4>
+                            <p>+919068679942</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Location</h4>
+                            <p>Saharanpur, India</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/sarthaktyagi2236999" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/aslivashu" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                        <a href="https://www.instagram.com/sarthak2236999?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+                        <!-- Hidden field for spam protection -->
+                        <input type="hidden" name="form-name" value="contact">
+                        <p style="display: none;">
+                            <label>Don't fill this out if you're human: <input name="bot-field"></label>
+                        </p>
+                        
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Sarthak Tyagi | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
