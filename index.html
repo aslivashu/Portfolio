@@ -648,13 +648,7 @@
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
-                        <!-- Hidden field for spam protection -->
-                        <input type="hidden" name="form-name" value="contact">
-                        <p style="display: none;">
-                            <label>Don't fill this out if you're human: <input name="bot-field"></label>
-                        </p>
-                        
+                    <form name="contact" method="POST" action="/.netlify/functions/contact-form" data-netlify="false">
                         <input type="text" name="name" placeholder="Your Name" required>
                         <input type="email" name="email" placeholder="Your Email" required>
                         <textarea name="message" placeholder="Your Message" rows="5" required></textarea>

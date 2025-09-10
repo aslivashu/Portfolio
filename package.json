@@ -1,0 +1,25 @@
+{
+  "name": "portfolio-with-netlify-db",
+  "version": "1.0.0",
+  "description": "Portfolio website with Netlify DB (Neon) integration",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "netlify dev",
+    "build": "netlify build",
+    "db:studio": "drizzle-kit studio",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate"
+  },
+  "dependencies": {
+    "@netlify/neon": "^1.0.0",
+    "drizzle-orm": "latest"
+  },
+  "devDependencies": {
+    "netlify-cli": "latest",
+    "drizzle-kit": "latest"
+  },
+  "keywords": ["portfolio", "netlify", "database", "neon", "drizzle", "ai-native"],
+  "author": "Sarthak Tyagi",
+  "license": "MIT"
+}
