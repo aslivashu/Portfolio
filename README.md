@@ -1,8 +1,10 @@
 # Portfolio Website
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/27f68b42-cf21-46d5-b3be-74628d5dae33/deploy-status)](https://app.netlify.com/projects/portfolio-sarthaktyagi/deploys)
+
 A modern, responsive portfolio website showcasing skills, experience, and projects in web development. Built with HTML5, CSS3, and JavaScript, featuring a clean design with smooth animations and interactive elements.
 
-**Live Demo**: [https://aslivashu.github.io/Portfolio/](https://aslivashu.github.io/Portfolio/)
+**Live Demo**: [https://portfolio-sarthaktyagi.netlify.app/](https://portfolio-sarthaktyagi.netlify.app/)
 
 ## Overview
 
@@ -146,7 +148,7 @@ This is a personal portfolio project. However, suggestions and feedback are welc
 - **Email**: sarthaktyagi1133@gmail.com
 - **LinkedIn**: [linkedin.com/in/sarthaktyagi2236999](https://www.linkedin.com/in/sarthaktyagi2236999)
 - **GitHub**: [github.com/aslivashu](https://github.com/aslivashu)
-- **Portfolio**: [aslivashu.github.io/Portfolio](https://aslivashu.github.io/Portfolio/)
+- **Portfolio**: [portfolio-sarthaktyagi.netlify.app](https://portfolio-sarthaktyagi.netlify.app/)
 
 ## License
 
