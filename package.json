@@ -12,8 +12,7 @@
     "db:migrate": "drizzle-kit migrate"
   },
   "dependencies": {
-    "@netlify/neon": "^1.0.0",
-    "drizzle-orm": "latest"
+    "@neondatabase/serverless": "^0.9.0"
   },
   "devDependencies": {
     "netlify-cli": "latest",
