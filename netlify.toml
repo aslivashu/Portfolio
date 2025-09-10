@@ -1,13 +1,2 @@
 [build]
-  publish = "dist"
-  command = "npm run build"
-
-[[plugins]]
-  package = "@netlify/plugin-neon"
-
-[functions]
-  directory = "netlify/functions"
-
-[dev]
-  command = "npm run dev"
-  port = 3000
+  publish = "."
