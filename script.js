@@ -58,15 +58,23 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateScrollProgress() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         const documentHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const scrollPercent = (scrollTop / documentHeight) * 100;
+        const scrollPercent = documentHeight > 0 ? (scrollTop / documentHeight) * 100 : 0;
         
         if (scrollProgress) {
-            scrollProgress.style.width = scrollPercent + '%';
+            scrollProgress.style.width = Math.max(0, Math.min(100, scrollPercent)) + '%';
         }
+    }
+    
+    // Initialize scroll progress to 0
+    if (scrollProgress) {
+        scrollProgress.style.width = '0%';
     }
     
     // Update scroll progress on scroll
     window.addEventListener('scroll', updateScrollProgress);
+    
+    // Call once to set initial state
+    updateScrollProgress();
 
     // Scroll Arrow visibility functionality with smooth scroll-based fade
     const scrollArrow = document.querySelector('.scroll-arrow');
@@ -119,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add scroll event listener for arrow visibility
     window.addEventListener('scroll', requestScrollUpdate);
     
-    // Form submission handling
+    // Form submission handling for Netlify Forms
     const netlifyContactForm = document.querySelector('form[name="contact"]');
     if (netlifyContactForm) {
         netlifyContactForm.addEventListener('submit', function(e) {
@@ -133,6 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Create FormData
             const formData = new FormData(this);
+            formData.append('form-name', 'contact'); // Required for Netlify
             
             // Submit to Netlify
             fetch('/', {
@@ -150,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 showCustomAlert('Oops! Something went wrong. Please try again or contact me directly via email.', 'error');
             })
             .finally(() => {
-                // Reset button
+                // Reset button state
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
             });
@@ -362,44 +371,6 @@ document.addEventListener('DOMContentLoaded', function() {
         window.addEventListener('resize', () => {
             resizeCanvas();
             initParticles();
-        });
-    }
-
-    // Contact form handling
-    const contactForm = document.querySelector('.contact-form form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const name = formData.get('name');
-            const email = formData.get('email');
-            const message = formData.get('message');
-
-            // Simple validation
-            if (!name || !email || !message) {
-                showCustomAlert('Please fill in all fields.', 'error');
-                return;
-            }
-
-            // Show loading state
-            const submitBtn = this.querySelector('button[type="submit"]');
-            const originalText = submitBtn.textContent;
-            submitBtn.textContent = 'Sending...';
-            submitBtn.disabled = true;
-            submitBtn.style.background = '#666';
-
-            // Simulate sending (replace with actual form submission)
-            setTimeout(() => {
-                showCustomAlert(`Thank you ${name}! Your message has been sent successfully. I'll get back to you soon!`, 'success');
-                this.reset();
-                
-                // Reset button
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-                submitBtn.style.background = '';
-            }, 2000);
         });
     }
 
