@@ -648,7 +648,8 @@
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form name="contact" method="POST" netlify>
+                    <form name="contact" method="POST" data-netlify="true" action="/thank-you.html">
+                        <input type="hidden" name="form-name" value="contact" />
                         <input type="text" name="name" placeholder="Your Name" required>
                         <input type="email" name="email" placeholder="Your Email" required>
                         <textarea name="message" placeholder="Your Message" rows="5" required></textarea>

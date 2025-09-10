@@ -127,44 +127,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add scroll event listener for arrow visibility
     window.addEventListener('scroll', requestScrollUpdate);
     
-    // Form submission handling for Netlify Forms
-    const netlifyContactForm = document.querySelector('form[name="contact"]');
-    if (netlifyContactForm) {
-        netlifyContactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Show loading state
-            const submitBtn = this.querySelector('button[type="submit"]');
-            const originalText = submitBtn.textContent;
-            submitBtn.textContent = 'Sending...';
-            submitBtn.disabled = true;
-            
-            // Create FormData
-            const formData = new FormData(this);
-            formData.append('form-name', 'contact'); // Required for Netlify
-            
-            // Submit to Netlify
-            fetch('/', {
-                method: 'POST',
-                headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                body: new URLSearchParams(formData).toString()
-            })
-            .then(() => {
-                // Success
-                showCustomAlert('Message sent successfully! Thank you for reaching out.', 'success');
-                this.reset();
-            })
-            .catch(() => {
-                // Error
-                showCustomAlert('Oops! Something went wrong. Please try again or contact me directly via email.', 'error');
-            })
-            .finally(() => {
-                // Reset button state
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-            });
-        });
-    }
+    // Let Netlify Forms handle form submission naturally
+    // No JavaScript intervention needed for basic form handling
     
     // Alert close button functionality
     document.addEventListener('click', function(e) {
