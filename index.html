@@ -13,6 +13,13 @@
     <canvas id="particleCanvas"></canvas>
     <div class="scroll-progress" style="position: fixed; top: 0px; left: 0px; width: 0%; height: 3px; background: linear-gradient(135deg, rgb(100, 255, 218) 0%, rgb(108, 92, 231) 50%, rgb(255, 107, 107) 100%); z-index: 1001; transition: width 0.1s;"></div>
     
+    <!-- Hidden form for Netlify form detection -->
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <textarea name="message"></textarea>
+    </form>
+    
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
